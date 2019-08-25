@@ -230,10 +230,16 @@ int main(int argc, char* argv[])
 
     if(cmd == "version" || cmd == "-version" || cmd == "--version")
     {
-        std::cout << "Nift (aka nsm) v1.7" << std::endl;
+        std::cout << "Nift (aka nsm) v1.8" << std::endl;
 
         return 0;
     }
+	else if(cmd == "GETTHING")
+	{
+		std::cout << argv[0] << std::endl;
+
+		return 0;
+	}
     else if(cmd == "commands")
     {
         std::string str = "";
