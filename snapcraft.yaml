@@ -1,5 +1,5 @@
 name: nsm
-version: '2.0'
+version: '2.0.1'
 summary: dynamic/static site generator
 license: MIT
 description: |
