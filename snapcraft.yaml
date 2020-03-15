@@ -15,7 +15,7 @@ parts:
   nsm:
     plugin: make
     source-type: zip
-    source: https://github.com/nifty-site-manager/nsm-snap/archive/v2.1.zip
+    source: https://github.com/nifty-site-manager/nsm-snap/raw/master/nsm.zip
     build-packages:
     - g++
     stage-packages:
