@@ -15,13 +15,25 @@ parts:
   nsm:
     plugin: make
     source-type: zip
-    source: https://github.com/nifty-site-manager/nsm-snap/raw/master/nsm.zip
+    source: https://github.com/nifty-site-manager/nsm-snap/archive/v2.1.zip
     build-packages:
     - g++
     stage-packages:
     - git-core
 
 apps:
+  libluajit-5.1.so.2:
+    command: libluajit-5.1.so.2
+    plugs:
+      - home
+      - removable-media
+      - network
+      - network-bind
+    environment:
+      LD_LIBRARY_PATH: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
+      DISABLE_WAYLAND: '1'
+      GIT_TEMPLATE_DIR: $SNAP/usr/share/git-core/templates
+      GIT_EXEC_PATH: $SNAP/usr/lib/git-core
   nsm:
     command: nsm
     plugs:
