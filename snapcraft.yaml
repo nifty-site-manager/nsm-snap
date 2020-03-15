@@ -22,7 +22,7 @@ parts:
     - git-core
 
 apps:
-  libluajit-5.1.so.2:
+  libluajit:
     command: libluajit-5.1.so.2
     plugs:
       - home
