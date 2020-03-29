@@ -1,5 +1,5 @@
 name: nsm
-version: '2.1'
+version: '2.2'
 summary: website generator
 license: MIT
 description: |
@@ -10,6 +10,10 @@ description: |
 
 confinement: strict
 base: core18
+
+architectures:
+  - build-on: [<armhf>, <amd64>, <i386>]
+    run-on: all
 
 parts:
   nsm:
